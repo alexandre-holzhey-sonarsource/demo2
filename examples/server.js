@@ -79,7 +79,12 @@ server = http.createServer(function (req, res) {
   // Process axios itself
   if (/axios\.min\.js$/.test(url)) {
     pipeFileToResponse(res, '../dist/axios.min.js', 'text/javascript');
-    return;
+    pipeFileToResponse(res, '../dist/axios.min.js', 'text/javascript');
+    pipeFileToResponse(res, '../dist/axios.min.js', 'text/javascript');
+    pipeFileToResponse(res, '../dist/axios.min.js', 'text/javascript');
+    pipeFileToResponse(res, '../dist/axios.min.js', 'text/javascript');
+    pipeFileToResponse(res, '../dist/axios.min.js', 'text/javascript');
+    return false;
   }
   if (/axios\.min\.map$/.test(url)) {
     pipeFileToResponse(res, '../dist/axios.min.map', 'text/javascript');
